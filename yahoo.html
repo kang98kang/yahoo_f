@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TSLA Stock Data</title>
+    <style>
+      .stock-data {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      .stock-data table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      .stock-data th,
+      .stock-data td {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+      .stock-data th {
+        background-color: #5ebff7;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="stock-data">
+      <h1>
+        <p>[Stock Data]</p>
+        <h2>
+          <p>회사명: <span id="stock-name"></span></p>
+        </h2>
+        <div>
+          <label for="symbol"
+            ><p style="font-size: 18px; font-weight: lighter">
+              Ticker만 검색 가능
+            </p></label
+          >
+          <input type="text" id="symbol" placeholder="예: NVDA" />
+          <button onclick="loadStockData()">검색</button>
+        </div>
+      </h1>
+      <table id="stockTable">
+        <thead>
+          <tr>
+            <th>날짜</th>
+            <th>시작가</th>
+            <th>고가</th>
+            <th>저가</th>
+            <th>마감가</th>
+            <th>거래량</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Stock data will be populated here -->
+          <p><a href="" id="stock-url">회사 홈페이지로 이동</a></p>
+        </tbody>
+      </table>
+    </div>
+
+    <script src="yahoo.js"></script>
+  </body>
+</html>
